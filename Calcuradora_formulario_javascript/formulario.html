@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bla bla</title>
+
+    <script>
+        var usuario_cadastrado = "Allan";
+        var senha_cadastrada = "VScode";
+
+        function validarCredenciais()
+        {
+        let usuario_digitado = document.getElementById("usuario").value
+        let senha_digitada = document.getElementById("senha").value
+
+            if ((usuario_digitado == usuario_cadastrado) && (senha_digitada == senha_cadastrada)) {
+                
+            document.getElementById("usuario").style.backgroundColor = "green";
+            document.getElementById("senha").style.backgroundColor = "green"
+            alert("credenciais corretas");
+            }
+
+            else
+            {
+                document.getElementById("usuario").style.backgroundColor = "red";
+                document.getElementById("senha").style.backgroundColor = "red";
+                alert("credenciais incorretas");
+            }
+        }
+
+        function cadastroUsuario()
+        {
+            usuario_cadastrado = document.getElementById("usuario").value
+            senha_cadastrada = document.getElementById("senha").value
+        }
+
+
+    </script>
+</head>
+<body>
+        <h1>Login</h1>
+        <input type="text" id="usuario" placeholder="nome de usuário ou e-mail"><br>
+        <input type="password" id="senha" placeholder="senha"><br>
+        <button onclick="cadastroUsuario()">Cadastre-se</button>
+        <button onclick="validarCredenciais()">Verificar</button>
+</body>
+</html>
